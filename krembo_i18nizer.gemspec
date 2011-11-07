@@ -7,11 +7,11 @@ require "krembo_i18nizer/version"
 Gem::Specification.new do |s|
   s.name        = "krembo_i18nizer"
   s.version     = KremboI18nizer::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of KremboI18nizer."
-  s.description = "TODO: Description of KremboI18nizer."
+  s.authors     = ["Daniel Cohen"]
+  s.email       = ["daniel@codeinvain.com"]
+  s.homepage    = "http://github.com/Softron-Solutions/krembo"
+  s.summary     = "live translation gem for rails project , enables i18n yaml live update"
+  s.description = "live translation gem for rails project , enables i18n yaml live update. currently in alpha stage"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
