@@ -14,7 +14,8 @@ module KremboI18nizer
     end
 
     def find_file(files,key)
-      path = key.split('.').unshift('en')
+      locale = I18n.locale.to_s || 'en'
+      path = key.split('.').unshift(locale)
       files.each do |file|
         yaml = YAML.load_file("#{Rails.root.to_s}/config/locales/#{file}")
         return file unless yaml.find_path(path).nil?
