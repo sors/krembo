@@ -11,10 +11,12 @@ class Hash
 
   def append_path(path,value)
     last = path.pop
-    leef = path.inject(self) do |location, key|
-       location[key] = {}
+    node = self
+    path.each do |item|
+      node[item] ||= {}
+      node = node[item]
     end
-    leef[last] = value
+    node[last] = value
     return true
   end
 

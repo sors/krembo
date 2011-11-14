@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    krembo_i18nizer (0.0.3)
+    krembo_i18nizer (0.0.4)
       rails (~> 3.1.1)
 
 GEM
