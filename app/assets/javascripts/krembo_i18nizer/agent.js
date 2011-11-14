@@ -91,7 +91,7 @@ I18nT =
         var key = jQuery(field).data('key')
         jQuery(field).parent().data("active",'false')
         jQuery(field).parent().html(jQuery(field).val())
-        jQuery.get('/krembo_i18nizer/translator/update?key='+escape(key)+'&value='+escape(val));
+        jQuery.get('/krembo_i18nizer/translator/update?key='+encodeURI(key)+'&value='+encodeURI(val));
       }
       jQuery(".i18nized").click(function(e) {
         if (!I18nT.active) {return;}
