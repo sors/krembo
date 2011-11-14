@@ -9,6 +9,15 @@ class Hash
     leef
   end
 
+  def append_path(path,value)
+    last = path.pop
+    leef = path.inject(self) do |location, key|
+       location[key] = {}
+    end
+    leef[last] = value
+    return true
+  end
+
   def replace_path(path,value)
     if (find_path(path).nil?)
       return false
@@ -17,7 +26,6 @@ class Hash
     leef = path.inject(self) do |location, key|
       location.respond_to?(:keys) ? location[key] : nil
     end
-    puts leef.class
     leef[last] = value
     return true
   end
