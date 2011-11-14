@@ -1,5 +1,5 @@
 ---
 en:
-  hello: boris
+  hello: Hello
   hi:
-    world: test about it
+    world: World
