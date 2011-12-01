@@ -11,7 +11,6 @@ module KremboI18nizer::Rack
     # method required by Rack interface
     def call(env)
 
-      result = @app.call(env)   # [status, headers, response]
       status , headers, response = @app.call(env)
 
       if (should_instrument?(status, headers))
